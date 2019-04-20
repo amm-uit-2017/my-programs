@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rc=$(curl -k https://s3-ap-southeast-1.amazonaws.com/amm-program/.vimrc)
-wget https://s3-ap-southeast-1.amazonaws.com/amm-program/ayu.vim
+rc=$(curl -k https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/vimrc)
+wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/ayu.vim
 
 echo "$rc" >> /etc/vim/vimrc
 
