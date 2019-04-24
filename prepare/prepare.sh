@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "########## Installing Basic Programs #########"
+yum install wget vim net-tools git tcpdump
+
 wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/vimrc
 wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/ayu.vim
 
