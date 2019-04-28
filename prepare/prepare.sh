@@ -4,29 +4,34 @@
 function install_programs (){
 	echo "########## Installing Programs ##########";
 	echo "Net-tools, Wget, Vim, Git, Tcpdump, NTP-client will be installed."
-	# yum install wget vim net-tools git tcpdump ntp
+
+	yum install wget vim net-tools git tcpdump ntp
+
 	sleep 1
 }
 
 function adjust_time (){
 	echo "########## Adjusting Time ##########";
+
+	ln -sf /usr/share/zoneinfo/Asia/Yangon /etc/localtime
+
 	sleep 1
-	# ln -sf /usr/share/zoneinfo/Asia/Yangon /etc/localtime
 }
 
 function vim_theme (){
 	echo "########## Installing Vim Theme #########"
+
+	wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/vimrc
+	wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/ayu.vim
+
+	mv vimrc ~/.vimrc
+
+	mkdir -p ~/.vim/colors
+	mv ayu.vim ~/.vim/colors/
+
+	echo "set bell-style none" >> /etc/inputrc
+	
 	sleep 1
-
-	# wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/vimrc
-	# wget https://raw.githubusercontent.com/amm-uit-2017/my-programs/master/prepare/ayu.vim
-
-	# mv vimrc ~/.vimrc
-
-	# mkdir -p ~/.vim/colors
-	# mv ayu.vim ~/.vim/colors/
-
-	# echo "set bell-style none" >> /etc/inputrc
 }
 
 function do_all (){
