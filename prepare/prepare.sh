@@ -58,7 +58,7 @@ while true; do
 	Choose Your Desire Option
 	===========================================
 	(1) Install Basic Packages
-	(2) Adjust Time"
+	(2) Adjust Time
 	(3) Configuring Vim Theme
 	(4) Do All Steps
 	(0) Quit
